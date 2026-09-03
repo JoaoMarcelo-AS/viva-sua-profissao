@@ -1,0 +1,821 @@
+/* Configurações gerais */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f5f7;
+  color: #28283d;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 70px 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(28px, 5vw, 45px);
+  line-height: 1.2;
+}
+
+/* Menu */
+
+.menu {
+  width: calc(100% - 20px);
+  min-height: 70px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: rgba(30, 15, 55, 0.45);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.logo {
+  display: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.navegacao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 15px;
+}
+
+.navegacao a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navegacao a:hover {
+  color: #55dff5;
+}
+
+/* Início */
+
+.inicio {
+  min-height: 100vh;
+  padding-top: 130px;
+  background: linear-gradient(135deg, #22005c, #5515b5, #250061);
+  color: #fff;
+}
+
+.inicio-conteudo {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.inicio-texto {
+  width: 100%;
+}
+
+.inicio-subtitulo {
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 8px 15px;
+  border: 1px solid #55dff5;
+  border-radius: 25px;
+  color: #55dff5;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.inicio-texto h1 {
+  margin-bottom: 20px;
+  font-size: clamp(42px, 10vw, 70px);
+  line-height: 1;
+}
+
+.inicio-texto h1 span {
+  display: block;
+  color: #55dff5;
+}
+
+.inicio-descricao {
+  max-width: 600px;
+  margin-bottom: 25px;
+  color: #e4dcff;
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.6;
+}
+
+.inicio-botao {
+  display: inline-block;
+  padding: 15px 20px;
+  background: #ffbc1f;
+  border-radius: 30px;
+  color: #342300;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.inicio-botao:hover {
+  transform: scale(1.05);
+}
+
+.inicio-imagem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio-imagem img {
+  width: min(100%, 450px);
+  height: auto;
+  object-fit: contain;
+  animation: levitar 3s ease-in-out infinite;
+}
+
+/* Profissão */
+
+.profissao {
+  background: #fff;
+}
+
+.profissao-conteudo {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.profissao-subtitulo {
+  width: fit-content;
+  margin-bottom: 15px;
+  padding: 7px 12px;
+  border: 1px solid #6938d3;
+  border-radius: 20px;
+  color: #6938d3;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.profissao-texto h2 {
+  margin-bottom: 20px;
+}
+
+.profissao-texto h2 span {
+  color: #6938d3;
+}
+
+.profissao-texto > p {
+  margin-bottom: 12px;
+  color: #666677;
+  line-height: 1.7;
+}
+
+.profissao-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.profissao-card {
+  padding: 22px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(40, 40, 70, 0.1);
+}
+
+.card-icone {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.profissao-card h3 {
+  margin-bottom: 8px;
+}
+
+.profissao-card p {
+  color: #666677;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Mercado */
+
+.mercado {
+  background: linear-gradient(135deg, #e8f9ff, #f4fff8);
+}
+
+.mercado-conteudo {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.mercado-subtitulo {
+  width: fit-content;
+  margin-bottom: 15px;
+  padding: 7px 12px;
+  border: 1px solid #2ca866;
+  border-radius: 20px;
+  color: #238750;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.mercado-texto h2 {
+  margin-bottom: 20px;
+}
+
+.mercado-texto h2 span {
+  color: #2ca866;
+}
+
+.mercado-texto > p {
+  color: #666677;
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.7;
+}
+
+.salario {
+  margin-top: 25px;
+}
+
+.salario p {
+  color: #666677;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.salario h3 {
+  margin: 8px 0;
+  color: #238750;
+  font-size: clamp(40px, 6vw, 60px);
+}
+
+.salario span {
+  display: block;
+  max-width: 500px;
+  color: #666677;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.salario-botao {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 20px;
+  background: #238750;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+}
+
+.salario-botao:hover {
+  transform: scale(1.05);
+  background: #1b6b3e;
+}
+
+.mercado-empresas {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.empresa-card {
+  min-width: 0;
+  min-height: 110px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+}
+
+.empresa-card > span {
+  flex-shrink: 0;
+  font-size: 30px;
+}
+
+.empresa-texto {
+  min-width: 0;
+}
+
+.empresa-texto h3 {
+  margin-bottom: 5px;
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+.empresa-texto p {
+  color: #666677;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Linguagens */
+
+.linguagens {
+  background: linear-gradient(135deg, #f0ecff, #fff);
+}
+
+.linguagens-conteudo {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.linguagens-subtitulo {
+  width: fit-content;
+  margin-bottom: 15px;
+  padding: 7px 12px;
+  border: 1px solid #6938d3;
+  border-radius: 20px;
+  color: #6938d3;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.linguagens-texto h2 {
+  margin-bottom: 15px;
+}
+
+.linguagens-texto h2 span {
+  color: #6938d3;
+}
+
+.linguagens-texto > p {
+  color: #666677;
+  line-height: 1.6;
+}
+
+.linguagens-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.linguagem-card {
+  min-height: 140px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.linguagem-card:hover {
+  transform: translateY(-5px);
+}
+
+.linguagem-card div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.linguagem-card div p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.linguagem-icone {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.linguagem-card span {
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.linguagem-card.js-card div p,
+.linguagem-card.js-card span {
+  color: #28283d;
+}
+
+/* Entrevista */
+
+.entrevista {
+  background: #fffaf1;
+}
+
+.entrevista-conteudo {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.entrevista-subtitulo {
+  width: fit-content;
+  margin-bottom: 15px;
+  padding: 7px 12px;
+  border: 1px solid #e99a12;
+  border-radius: 20px;
+  color: #d88700;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.entrevista-texto h2 {
+  margin-bottom: 30px;
+}
+
+.entrevista-texto h2 span {
+  color: #d88700;
+}
+
+.entrevistado {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  border-radius: 18px;
+}
+
+.entrevistado-foto {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.entrevistado-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.entrevistado-informacoes {
+  min-width: 0;
+}
+
+.entrevistado-informacoes p {
+  margin-bottom: 6px;
+  color: #d88700;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.entrevistado-informacoes h3 {
+  margin-bottom: 5px;
+}
+
+.entrevistado-informacoes span {
+  color: #666677;
+  font-size: 13px;
+}
+
+/* Perguntas */
+
+.perguntas {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.pergunta {
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(40, 40, 70, 0.06);
+}
+
+.pergunta h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.pergunta p {
+  margin-bottom: 15px;
+  color: #666677;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pergunta-botao {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #fff1d6;
+  color: #d88700;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pergunta-botao:hover {
+  transform: translateY(-2px);
+  background: #ffe5b0;
+}
+
+/* Modal */
+
+.modal {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(25, 10, 50, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+}
+
+.modal.ativo {
+  display: flex;
+}
+
+.modal-conteudo {
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 35px 30px;
+  position: relative;
+  background: #fff;
+  border-radius: 25px;
+  text-align: center;
+  animation: abrir-modal 0.4s ease-out;
+}
+
+#fechar-modal,
+.fechar-modal {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #f1f1f1;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#fechar-modal:hover,
+.fechar-modal:hover {
+  transform: rotate(90deg);
+}
+
+#modal-icone {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+}
+
+#modal-icone img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#modal-subtitulo {
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#modal-texto {
+  color: #666677;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Modal entrevista */
+
+.modal-entrevista-conteudo {
+  width: 100%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 40px 30px;
+  position: relative;
+  background: #fff;
+  border-radius: 25px;
+  animation: abrir-modal 0.4s ease-out;
+}
+
+.modal-entrevista-tag {
+  margin-bottom: 12px;
+  color: #d88700;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#modal-pergunta {
+  margin-bottom: 20px;
+  padding-right: 30px;
+  font-size: clamp(20px, 4vw, 28px);
+}
+
+#modal-resposta {
+  color: #555566;
+  line-height: 1.7;
+}
+
+#modal-resposta p {
+  margin-bottom: 14px;
+}
+
+/* Tablet */
+
+@media (min-width: 600px) {
+  section {
+    padding: 80px 30px;
+  }
+
+  .profissao-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .linguagens-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mercado-empresas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .empresa-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .perguntas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Computador */
+
+@media (min-width: 900px) {
+  section {
+    padding: 100px 40px;
+  }
+
+  .menu {
+    width: calc(100% - 40px);
+    min-height: 80px;
+    top: 20px;
+    left: 20px;
+    justify-content: space-between;
+    padding: 15px 40px;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .navegacao {
+    gap: 35px;
+  }
+
+  .inicio-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .inicio-imagem img {
+    width: min(100%, 500px);
+  }
+
+  .profissao-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mercado-conteudo {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 50px;
+  }
+
+  .mercado-empresas {
+    margin-top: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .empresa-card {
+    height: 100%;
+  }
+
+  .empresa-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .linguagens-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .linguagem-card {
+    min-height: 150px;
+    padding: 20px 25px;
+  }
+
+  .entrevista-conteudo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+    gap: 40px;
+    align-items: center;
+  }
+
+  .entrevista-texto h2 {
+    margin-bottom: 0;
+  }
+
+  .perguntas {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Animações */
+
+@keyframes levitar {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes abrir-modal {
+  0% {
+    opacity: 0;
+    transform: scale(0.88) translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
