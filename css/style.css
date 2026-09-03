@@ -18,7 +18,8 @@ body {
 }
 
 section {
-  padding: 70px 20px;
+  width: 100%;
+  padding: 10vh 5vw;
 }
 
 h1,
@@ -28,28 +29,35 @@ h3 {
 }
 
 h2 {
-  font-size: clamp(28px, 5vw, 45px);
+  font-size: clamp(28px, 5vw, 52px);
   line-height: 1.2;
 }
 
 /* Menu */
 
 .menu {
-  width: calc(100% - 20px);
+  width: 94%;
   min-height: 70px;
   position: fixed;
   top: 10px;
-  left: 10px;
+  left: 3%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 15px;
+
   background: rgba(30, 15, 55, 0.45);
+
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
+
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
   z-index: 1000;
 }
 
@@ -63,15 +71,15 @@ h2 {
 
 .navegacao {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px 15px;
+  flex-wrap: wrap;
+  gap: clamp(10px, 2vw, 25px);
 }
 
 .navegacao a {
   color: #fff;
   text-decoration: none;
-  font-size: 11px;
+  font-size: clamp(10px, 2.5vw, 14px);
   font-weight: bold;
   white-space: nowrap;
   transition: 0.3s;
@@ -85,40 +93,65 @@ h2 {
 
 .inicio {
   min-height: 100vh;
+  min-height: 100svh;
+
   padding-top: 130px;
+
+  display: flex;
+  align-items: center;
+
   background: linear-gradient(135deg, #22005c, #5515b5, #250061);
+
   color: #fff;
+
+  overflow: hidden;
 }
 
 .inicio-conteudo {
   width: 100%;
   max-width: 1100px;
+
   margin: auto;
+
   display: flex;
   flex-direction: column;
-  gap: 35px;
+
+  gap: 6vh;
 }
 
 .inicio-texto {
   width: 100%;
+  min-width: 0;
 }
 
 .inicio-subtitulo {
   width: fit-content;
+
   margin-bottom: 20px;
+
   padding: 8px 15px;
+
   border: 1px solid #55dff5;
   border-radius: 25px;
+
   color: #55dff5;
-  font-size: 11px;
+
+  font-size: clamp(9px, 2vw, 12px);
   font-weight: bold;
+
   letter-spacing: 1px;
 }
 
 .inicio-texto h1 {
+  width: 100%;
+
   margin-bottom: 20px;
-  font-size: clamp(42px, 10vw, 70px);
-  line-height: 1;
+
+  font-size: clamp(38px, 10vw, 70px);
+  line-height: 1.05;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .inicio-texto h1 span {
@@ -128,21 +161,31 @@ h2 {
 
 .inicio-descricao {
   max-width: 600px;
+
   margin-bottom: 25px;
+
   color: #e4dcff;
-  font-size: clamp(15px, 2vw, 18px);
+
+  font-size: clamp(15px, 3.5vw, 18px);
   line-height: 1.6;
 }
 
 .inicio-botao {
   display: inline-block;
-  padding: 15px 20px;
+
+  padding: 15px 25px;
+
   background: #ffbc1f;
+
   border-radius: 30px;
+
   color: #342300;
+
   text-decoration: none;
-  font-size: 11px;
+
+  font-size: clamp(10px, 2.5vw, 13px);
   font-weight: bold;
+
   transition: 0.3s;
 }
 
@@ -152,15 +195,19 @@ h2 {
 
 .inicio-imagem {
   width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .inicio-imagem img {
-  width: min(100%, 450px);
+  width: min(90vw, 450px);
   height: auto;
+  max-height: 50vh;
+
   object-fit: contain;
+
   animation: levitar 3s ease-in-out infinite;
 }
 
@@ -173,17 +220,23 @@ h2 {
 .profissao-conteudo {
   width: 100%;
   max-width: 1100px;
+
   margin: auto;
 }
 
 .profissao-subtitulo {
   width: fit-content;
+
   margin-bottom: 15px;
+
   padding: 7px 12px;
+
   border: 1px solid #6938d3;
   border-radius: 20px;
+
   color: #6938d3;
-  font-size: 10px;
+
+  font-size: clamp(9px, 2vw, 11px);
   font-weight: bold;
 }
 
@@ -196,37 +249,51 @@ h2 {
 }
 
 .profissao-texto > p {
+  max-width: 750px;
+
   margin-bottom: 12px;
+
   color: #666677;
+
+  font-size: clamp(15px, 3vw, 17px);
   line-height: 1.7;
 }
 
 .profissao-cards {
   margin-top: 30px;
+
   display: grid;
+
   grid-template-columns: 1fr;
-  gap: 15px;
+
+  gap: 20px;
 }
 
 .profissao-card {
-  padding: 22px;
+  padding: clamp(20px, 4vw, 30px);
+
   background: #fff;
+
   border-radius: 18px;
+
   box-shadow: 0 10px 30px rgba(40, 40, 70, 0.1);
 }
 
 .card-icone {
   margin-bottom: 15px;
-  font-size: 28px;
+  font-size: clamp(26px, 5vw, 35px);
 }
 
 .profissao-card h3 {
   margin-bottom: 8px;
+  font-size: clamp(18px, 3vw, 22px);
 }
 
 .profissao-card p {
   color: #666677;
-  font-size: 14px;
+
+  font-size: clamp(14px, 2.5vw, 16px);
+
   line-height: 1.6;
 }
 
@@ -239,17 +306,32 @@ h2 {
 .mercado-conteudo {
   width: 100%;
   max-width: 1100px;
+
   margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 35px;
+}
+
+.mercado-texto {
+  width: 100%;
 }
 
 .mercado-subtitulo {
   width: fit-content;
+
   margin-bottom: 15px;
+
   padding: 7px 12px;
+
   border: 1px solid #2ca866;
   border-radius: 20px;
+
   color: #238750;
-  font-size: 10px;
+
+  font-size: clamp(9px, 2vw, 11px);
   font-weight: bold;
 }
 
@@ -263,74 +345,102 @@ h2 {
 
 .mercado-texto > p {
   color: #666677;
-  font-size: clamp(15px, 2vw, 18px);
+
+  font-size: clamp(15px, 3vw, 17px);
   line-height: 1.7;
 }
 
 .salario {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .salario p {
+  margin-bottom: 10px;
+
   color: #666677;
-  font-size: 11px;
+
+  font-size: clamp(10px, 2vw, 12px);
   font-weight: bold;
 }
 
 .salario h3 {
-  margin: 8px 0;
+  margin-bottom: 10px;
+
   color: #238750;
-  font-size: clamp(40px, 6vw, 60px);
+
+  font-size: clamp(42px, 8vw, 65px);
 }
 
 .salario span {
   display: block;
+
   max-width: 500px;
+
   color: #666677;
-  font-size: 13px;
+
+  font-size: clamp(13px, 2.5vw, 16px);
+
   line-height: 1.6;
 }
 
 .salario-botao {
   display: inline-block;
+
   margin-top: 25px;
   padding: 15px 20px;
+
   background: #238750;
+
   border-radius: 30px;
+
   color: #fff;
+
   text-decoration: none;
-  font-size: 11px;
+
+  font-size: clamp(10px, 2vw, 12px);
   font-weight: bold;
+
   transition: 0.3s;
-  border: none;
 }
 
 .salario-botao:hover {
-  transform: scale(1.05);
-  background: #1b6b3e;
+  transform: translateY(-3px);
+  background: #176b3e;
 }
 
 .mercado-empresas {
-  margin-top: 35px;
+  width: 100%;
+
   display: grid;
+
   grid-template-columns: 1fr;
-  gap: 15px;
+
+  gap: 20px;
 }
 
 .empresa-card {
+  width: 100%;
+
   min-width: 0;
-  min-height: 110px;
-  padding: 20px;
+
+  padding: clamp(20px, 4vw, 30px);
+
   display: flex;
   align-items: center;
+
   gap: 15px;
+
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 15px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(40, 40, 70, 0.05);
 }
 
 .empresa-card > span {
   flex-shrink: 0;
-  font-size: 30px;
+
+  font-size: clamp(28px, 5vw, 38px);
 }
 
 .empresa-texto {
@@ -339,12 +449,15 @@ h2 {
 
 .empresa-texto h3 {
   margin-bottom: 5px;
-  font-size: clamp(18px, 3vw, 24px);
+
+  font-size: clamp(18px, 3vw, 23px);
 }
 
 .empresa-texto p {
   color: #666677;
-  font-size: 13px;
+
+  font-size: clamp(13px, 2.5vw, 16px);
+
   line-height: 1.5;
 }
 
@@ -357,17 +470,23 @@ h2 {
 .linguagens-conteudo {
   width: 100%;
   max-width: 1100px;
+
   margin: auto;
 }
 
 .linguagens-subtitulo {
   width: fit-content;
+
   margin-bottom: 15px;
+
   padding: 7px 12px;
+
   border: 1px solid #6938d3;
   border-radius: 20px;
+
   color: #6938d3;
-  font-size: 10px;
+
+  font-size: clamp(9px, 2vw, 11px);
   font-weight: bold;
 }
 
@@ -381,28 +500,39 @@ h2 {
 
 .linguagens-texto > p {
   color: #666677;
+
+  font-size: clamp(15px, 3vw, 17px);
+
   line-height: 1.6;
 }
 
 .linguagens-cards {
   margin-top: 30px;
+
   display: grid;
+
   grid-template-columns: 1fr;
-  gap: 15px;
+
+  gap: 20px;
 }
 
 .linguagem-card {
+  width: 100%;
+
   min-height: 140px;
-  padding: 18px 22px;
+
+  padding: 20px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   border: none;
   border-radius: 18px;
+
   cursor: pointer;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+
+  transition: 0.3s;
 }
 
 .linguagem-card:hover {
@@ -412,24 +542,28 @@ h2 {
 .linguagem-card div {
   display: flex;
   align-items: center;
+
   gap: 20px;
 }
 
 .linguagem-card div p {
   color: #fff;
-  font-size: 20px;
+
+  font-size: clamp(18px, 4vw, 24px);
   font-weight: bold;
 }
 
 .linguagem-icone {
-  width: 50px;
-  height: 50px;
+  width: clamp(45px, 10vw, 60px);
+  height: clamp(45px, 10vw, 60px);
+
   object-fit: contain;
 }
 
 .linguagem-card span {
   color: #fff;
-  font-size: 10px;
+
+  font-size: clamp(10px, 2vw, 12px);
   font-weight: bold;
 }
 
@@ -447,22 +581,33 @@ h2 {
 .entrevista-conteudo {
   width: 100%;
   max-width: 1100px;
+
   margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 30px;
 }
 
 .entrevista-subtitulo {
   width: fit-content;
+
   margin-bottom: 15px;
+
   padding: 7px 12px;
+
   border: 1px solid #e99a12;
   border-radius: 20px;
+
   color: #d88700;
-  font-size: 10px;
+
+  font-size: clamp(9px, 2vw, 11px);
   font-weight: bold;
 }
 
 .entrevista-texto h2 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .entrevista-texto h2 span {
@@ -470,19 +615,19 @@ h2 {
 }
 
 .entrevistado {
-  padding: 20px;
+  padding: 25px;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 25px;
   background: #fff;
   border-radius: 18px;
 }
 
 .entrevistado-foto {
-  width: 80px;
-  height: 80px;
+  width: clamp(110px, 12vw, 160px);
+  height: clamp(110px, 12vw, 160px);
   flex-shrink: 0;
-  border-radius: 15px;
+  border-radius: 18px;
   overflow: hidden;
   background: #ddd;
 }
@@ -493,68 +638,94 @@ h2 {
   object-fit: cover;
 }
 
-.entrevistado-informacoes {
-  min-width: 0;
+.entrevistado-informacoes h3 {
+  margin-bottom: 8px;
+  font-size: clamp(24px, 2.5vw, 36px);
+}
+
+.entrevistado-informacoes h3 span {
+  color: #979696;
+  font-size: clamp(10px, 1.5vw, 15px);
+  font-weight: normal;
 }
 
 .entrevistado-informacoes p {
-  margin-bottom: 6px;
-  color: #d88700;
-  font-size: 10px;
-  font-weight: bold;
+  color: #666677;
+  font-size: clamp(10px, 1.2vw, 10px);
+  font-weight: normal;
 }
 
 .entrevistado-informacoes h3 {
   margin-bottom: 5px;
+
+  font-size: clamp(18px, 4vw, 24px);
 }
 
 .entrevistado-informacoes span {
   color: #666677;
-  font-size: 13px;
+
+  font-size: clamp(12px, 2.5vw, 15px);
 }
 
 /* Perguntas */
 
 .perguntas {
-  margin-top: 30px;
+  width: 100%;
+
   display: grid;
+
   grid-template-columns: 1fr;
-  gap: 15px;
+
+  gap: 20px;
 }
 
 .pergunta {
-  padding: 20px;
+  padding: clamp(20px, 4vw, 30px);
+
   background: #fff;
+
   border-radius: 15px;
+
   box-shadow: 0 8px 25px rgba(40, 40, 70, 0.06);
 }
 
 .pergunta h3 {
   margin-bottom: 10px;
-  font-size: 16px;
+
+  font-size: clamp(17px, 3vw, 21px);
 }
 
 .pergunta p {
   margin-bottom: 15px;
+
   color: #666677;
-  font-size: 14px;
+
+  font-size: clamp(14px, 2.5vw, 16px);
+
   line-height: 1.6;
 }
 
 .pergunta-botao {
   padding: 10px 15px;
+
   border: none;
   border-radius: 20px;
+
   background: #fff1d6;
+
   color: #d88700;
-  font-size: 10px;
+
+  font-size: clamp(10px, 2vw, 12px);
   font-weight: bold;
+
   cursor: pointer;
+
   transition: 0.3s;
 }
 
 .pergunta-botao:hover {
   transform: translateY(-2px);
+
   background: #ffe5b0;
 }
 
@@ -562,17 +733,24 @@ h2 {
 
 .modal {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100svh;
+
   position: fixed;
   top: 0;
   left: 0;
+
   display: none;
   align-items: center;
   justify-content: center;
+
   padding: 20px;
+
   background: rgba(25, 10, 50, 0.7);
+
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+
   z-index: 2000;
 }
 
@@ -581,15 +759,22 @@ h2 {
 }
 
 .modal-conteudo {
-  width: 100%;
-  max-width: 500px;
-  max-height: 90vh;
+  width: min(90vw, 500px);
+
+  max-height: 85vh;
+
   overflow-y: auto;
-  padding: 35px 30px;
+
+  padding: clamp(25px, 5vw, 35px);
+
   position: relative;
+
   background: #fff;
+
   border-radius: 25px;
+
   text-align: center;
+
   animation: abrir-modal 0.4s ease-out;
 }
 
@@ -597,18 +782,26 @@ h2 {
 .fechar-modal {
   width: 35px;
   height: 35px;
+
   position: absolute;
   top: 15px;
   right: 15px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border: none;
   border-radius: 50%;
+
   background: #f1f1f1;
+
   color: #333;
+
   font-size: 24px;
+
   cursor: pointer;
+
   transition: 0.3s;
 }
 
@@ -620,58 +813,78 @@ h2 {
 #modal-icone {
   width: 60px;
   height: 60px;
+
   margin: 0 auto 18px;
 }
 
 #modal-icone img {
   width: 100%;
   height: 100%;
+
   object-fit: contain;
 }
 
 #modal-subtitulo {
   margin-bottom: 8px;
-  font-size: 11px;
+
+  font-size: clamp(10px, 2vw, 12px);
   font-weight: bold;
+
   letter-spacing: 2px;
 }
 
 #modal-texto {
   color: #666677;
-  font-size: 15px;
+
+  font-size: clamp(14px, 3vw, 16px);
+
   line-height: 1.7;
 }
 
 /* Modal entrevista */
 
 .modal-entrevista-conteudo {
-  width: 100%;
-  max-width: 650px;
+  width: min(90vw, 650px);
+
   max-height: 85vh;
+
   overflow-y: auto;
-  padding: 40px 30px;
+
+  padding: clamp(25px, 5vw, 40px);
+
   position: relative;
+
   background: #fff;
+
   border-radius: 25px;
+
   animation: abrir-modal 0.4s ease-out;
 }
 
 .modal-entrevista-tag {
   margin-bottom: 12px;
+
   color: #d88700;
-  font-size: 10px;
+
+  font-size: clamp(9px, 2vw, 11px);
   font-weight: bold;
+
   letter-spacing: 1px;
 }
 
 #modal-pergunta {
   margin-bottom: 20px;
+
   padding-right: 30px;
-  font-size: clamp(20px, 4vw, 28px);
+
+  font-size: clamp(20px, 5vw, 28px);
 }
 
 #modal-resposta {
   color: #555566;
+
+  font-size: clamp(14px, 3vw, 16px);
+
   line-height: 1.7;
 }
 
@@ -683,7 +896,7 @@ h2 {
 
 @media (min-width: 600px) {
   section {
-    padding: 80px 30px;
+    padding: 10vh 7vw;
   }
 
   .profissao-cards {
@@ -694,33 +907,33 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .mercado-empresas {
+  .perguntas {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .empresa-card:last-child {
-    grid-column: 1 / -1;
-  }
-
-  .perguntas {
+  .mercado-empresas {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Computador */
+/* Desktop */
 
 @media (min-width: 900px) {
   section {
-    padding: 100px 40px;
+    padding: 12vh 5vw;
   }
 
   .menu {
     width: calc(100% - 40px);
+
     min-height: 80px;
+
     top: 20px;
     left: 20px;
+
     justify-content: space-between;
-    padding: 15px 40px;
+
+    padding: 0 40px;
   }
 
   .logo {
@@ -728,67 +941,69 @@ h2 {
   }
 
   .navegacao {
-    gap: 35px;
+    flex-wrap: nowrap;
   }
 
   .inicio-conteudo {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 40px;
+    gap: 5vw;
+  }
+
+  .inicio-texto h1 {
+    font-size: clamp(38px, 10vw, 50px);
+  }
+
+  .inicio {
+    padding-top: 120px;
   }
 
   .inicio-imagem img {
-    width: min(100%, 500px);
-  }
-
-  .profissao-cards {
-    grid-template-columns: repeat(2, 1fr);
+    width: min(40vw, 500px);
+    max-height: 65vh;
   }
 
   .mercado-conteudo {
-    display: grid;
-    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+    grid-template-columns: 42% 58%;
+
     align-items: center;
-    gap: 50px;
+
+    gap: 5vw;
   }
 
   .mercado-empresas {
-    margin-top: 0;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .empresa-card {
-    height: 100%;
-  }
-
-  .empresa-card:last-child {
-    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .linguagens-cards {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .linguagem-card {
-    min-height: 150px;
-    padding: 20px 25px;
-  }
-
   .entrevista-conteudo {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
-    gap: 40px;
-    align-items: center;
-  }
+    grid-template-columns: 1fr 420px;
 
-  .entrevista-texto h2 {
-    margin-bottom: 0;
+    align-items: center;
+
+    gap: 5vw;
   }
 
   .perguntas {
     grid-column: 1 / -1;
+
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Telas grandes */
+
+@media (min-width: 1400px) {
+  .inicio-conteudo,
+  .profissao-conteudo,
+  .mercado-conteudo,
+  .linguagens-conteudo,
+  .entrevista-conteudo {
+    max-width: 1300px;
   }
 }
 
