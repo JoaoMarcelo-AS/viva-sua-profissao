@@ -81,25 +81,6 @@ modal.addEventListener("click", function (evento) {
   }
 });
 
-// Salários
-const abrirSalarios = document.getElementById("abrir-salarios");
-const modalSalarios = document.getElementById("modal-salarios");
-const fecharSalarios = document.getElementById("fechar-salarios");
-
-abrirSalarios.addEventListener("click", function () {
-  modalSalarios.classList.add("ativo");
-});
-
-fecharSalarios.addEventListener("click", function () {
-  modalSalarios.classList.remove("ativo");
-});
-
-modalSalarios.addEventListener("click", function (evento) {
-  if (evento.target === modalSalarios) {
-    modalSalarios.classList.remove("ativo");
-  }
-});
-
 // Entrevista
 const perguntasEntrevista = [
   {
