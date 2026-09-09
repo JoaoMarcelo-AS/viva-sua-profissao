@@ -1010,3 +1010,153 @@ h2 {
     transform: scale(1) translateY(0);
   }
 }
+
+
+/* Botão de salários */
+
+.salario-botao {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #238750;
+  color: #fff;
+  font-size: clamp(10px, 2vw, 12px);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.salario-botao:hover {
+  transform: translateY(-2px);
+  background: #1d7042;
+}
+
+/* Botão outras tecnologias */
+
+.tecnologias-botao {
+  display: block;
+  margin: 30px auto 0;
+  padding: 15px 25px;
+  border: 1px solid #6938d3;
+  border-radius: 30px;
+  background: transparent;
+  color: #6938d3;
+  font-size: clamp(10px, 2vw, 13px);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tecnologias-botao:hover {
+  background: #6938d3;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Modal salários */
+
+.modal-salarios-conteudo h2 {
+  margin-bottom: 25px;
+  padding-right: 25px;
+}
+
+.modal-tag {
+  margin-bottom: 10px;
+  color: #238750;
+  font-size: clamp(9px, 2vw, 11px);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.salarios-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  text-align: left;
+}
+
+.salario-item {
+  padding: 18px;
+  background: #f4fff8;
+  border-radius: 15px;
+}
+
+.salario-item h3 {
+  margin-bottom: 7px;
+  color: #28283d;
+  font-size: clamp(16px, 3vw, 20px);
+}
+
+.salario-item p {
+  color: #238750;
+  font-size: clamp(13px, 2.5vw, 16px);
+  font-weight: bold;
+}
+
+/* Modal tecnologias */
+
+.modal-tecnologias-conteudo h2 {
+  margin-bottom: 25px;
+  padding-right: 25px;
+}
+
+.tecnologias-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  text-align: left;
+}
+
+.tecnologia-item {
+  min-height: 95px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f7f4ff;
+  border-radius: 15px;
+}
+
+.tecnologia-item img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.tecnologia-item h3 {
+  margin-bottom: 5px;
+  color: #28283d;
+  font-size: clamp(15px, 2.5vw, 19px);
+}
+
+.tecnologia-item span {
+  color: #6938d3;
+  font-size: clamp(10px, 2vw, 12px);
+  font-weight: bold;
+}
+
+.tecnologia-icone-texto {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #654ff0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+@media (max-width: 599px) {
+  .salarios-lista,
+  .tecnologias-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .tecnologias-botao {
+    width: 100%;
+  }
+}

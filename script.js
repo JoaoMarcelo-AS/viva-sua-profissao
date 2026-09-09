@@ -327,3 +327,40 @@ modalEntrevista.addEventListener("click", function (evento) {
     modalEntrevista.classList.remove("ativo");
   }
 });
+// Salários
+const abrirSalarios = document.getElementById("abrir-salarios");
+const modalSalarios = document.getElementById("modal-salarios");
+const fecharSalarios = document.getElementById("fechar-salarios");
+
+abrirSalarios.addEventListener("click", function () {
+  modalSalarios.classList.add("ativo");
+});
+
+fecharSalarios.addEventListener("click", function () {
+  modalSalarios.classList.remove("ativo");
+});
+
+modalSalarios.addEventListener("click", function (evento) {
+  if (evento.target === modalSalarios) {
+    modalSalarios.classList.remove("ativo");
+  }
+});
+
+// Outras tecnologias
+const abrirTecnologias = document.getElementById("abrir-tecnologias");
+const modalTecnologias = document.getElementById("modal-tecnologias");
+const fecharTecnologias = document.getElementById("fechar-tecnologias");
+
+abrirTecnologias.addEventListener("click", function () {
+  modalTecnologias.classList.add("ativo");
+});
+
+fecharTecnologias.addEventListener("click", function () {
+  modalTecnologias.classList.remove("ativo");
+});
+
+modalTecnologias.addEventListener("click", function (evento) {
+  if (evento.target === modalTecnologias) {
+    modalTecnologias.classList.remove("ativo");
+  }
+});
