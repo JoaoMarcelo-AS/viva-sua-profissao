@@ -98,7 +98,7 @@ const perguntasEntrevista = [
       </p>
 
       <p>
-        Depois disso, é recomendado aprender um framework, como React,
+        Depois disso, é recomendado aprender um framework,
         e também ter noções de versionamento com Git.
       </p>
 
